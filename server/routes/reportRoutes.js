@@ -22,6 +22,10 @@ router.post("/", upload.array("fotos"), async (req, res) => {
     const { especie, comentarios, ubicacion } = req.body;
     const fotos = req.files.map((file) => file.path);
 
+    if (especie !== "Perro" && especie !== "Gato") {
+      return res.status(400).json({ error: "La especie solo puede ser Perro o Gato." });
+    }
+
     const newReport = new Report({
       especie,
       comentarios: JSON.parse(comentarios),
