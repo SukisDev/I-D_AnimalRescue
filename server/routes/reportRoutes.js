@@ -16,9 +16,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+// routes/reportRoutes.js
 router.post("/", upload.array("fotos"), async (req, res) => {
   try {
-    console.log("POST recibido:", req.body);
     const { especie, comentarios, ubicacion } = req.body;
     const fotos = req.files.map((file) => file.path);
 
@@ -41,6 +41,7 @@ router.post("/", upload.array("fotos"), async (req, res) => {
     res.status(400).json({ error: "Error al guardar el reporte" });
   }
 });
+
 
 router.get('/', async (req, res) => {
   try {
