@@ -5,7 +5,7 @@ const ReportSchema = new mongoose.Schema(
   {
     especie: {
       type: String,
-      required: true, // ¡Asegura que siempre venga!
+      required: true, 
       enum: ["Perro", "Gato"] // Solo admite estos valores
     },
     comentarios: {
