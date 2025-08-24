@@ -1,9 +1,9 @@
 {
-  "name": "server",
+  "name": "app_animal_rescue-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongoose": "^8.15.0",
-    "multer": "^2.0.0"
+    "multer": "^2.0.0",
+    "sharp": "^0.34.2"
   }
 }
