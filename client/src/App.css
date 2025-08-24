@@ -1,0 +1,21 @@
+/* Animación modal fade+scale */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.custom-modal-anim .modal-content {
+  animation: modalFadeIn 0.25s cubic-bezier(.5,1.5,.5,1) both;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.7) translateY(20px); opacity: 0; }
+  80% { transform: scale(1.06); }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
